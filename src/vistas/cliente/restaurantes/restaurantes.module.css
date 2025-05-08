@@ -1,0 +1,174 @@
+.pageContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff9bb3;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .searchForm {
+    margin-top: 20px;
+  }
+  
+  .searchContainer {
+    display: flex;
+    width: 100%;
+  }
+  
+  .searchInput {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: #ff9bb3;
+  }
+  
+  .searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ff9bb3;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .searchButton:hover {
+    background-color: #ff7a9a;
+  }
+  
+  .searchButton span {
+    margin-left: 5px;
+  }
+  
+  .restaurantesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  .restauranteCard {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .restauranteCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .restauranteImageContainer {
+    height: 180px;
+    background-color: #f0f0f0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .restauranteImage {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  
+  .restauranteInfo {
+    padding: 15px;
+  }
+  
+  .restauranteNombre {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff9bb3;
+    margin: 0 0 5px 0;
+  }
+  
+  .restauranteDireccion {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px 0;
+  }
+  
+  .restauranteCategoria {
+    display: inline-block;
+    font-size: 12px;
+    background-color: #fff1f4;
+    color: #ff9bb3;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  
+  .restauranteActions {
+    display: flex;
+    padding: 0 15px 15px;
+    gap: 10px;
+  }
+  
+  .verMenuButton, .reservarButton {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+  }
+  
+  .verMenuButton {
+    background-color: white;
+    border: 1px solid #ff9bb3;
+    color: #ff9bb3;
+  }
+  
+  .verMenuButton:hover {
+    background-color: #fff1f4;
+  }
+  
+  .reservarButton {
+    background-color: #ff9bb3;
+    border: 1px solid #ff9bb3;
+    color: white;
+  }
+  
+  .reservarButton:hover {
+    background-color: #ff7a9a;
+  }
+  
+  .loadingContainer, .noResultsContainer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    color: #666;
+  }

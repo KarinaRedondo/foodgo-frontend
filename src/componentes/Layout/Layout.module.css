@@ -1,0 +1,14 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+.contenidoVistas {
+  flex-grow: 1;
+  margin-left: 9rem;
+  transition: margin 0.5s ease;
+}
+.contenidoVistasAbierto {
+  flex-grow: 1;
+  margin-left: 22rem;
+  transition: margin 0.5s ease;
+}
