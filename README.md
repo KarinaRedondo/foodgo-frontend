@@ -8,7 +8,7 @@
 
 El sistema es una plataforma de comercio local desarrollada con **Spring Boot** en el backend y **TypeScript con SWC** en el frontend, basada en una arquitectura de microservicios para garantizar escalabilidad y mantenimiento.  
 
-Facilita la interacción entre clientes,administradores y empleados mediante un sistema seguro que emplea **Spring Security** y autenticación **JWT** en el backend, mientras que en el frontend optimiza el rendimiento con **Vite y SWC**.  
+Facilita la interacción entre clientes, administradores y empleados mediante un sistema seguro que emplea **Spring Security** y autenticación **JWT** en el backend, mientras que en el frontend optimiza el rendimiento con **Vite y SWC**.  
 
 La plataforma permite gestionar usuarios, restaurantes, platos, mesas, reservas, vehículos, pedidos, detalles pedidos.
 
