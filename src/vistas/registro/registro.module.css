@@ -1,146 +1,76 @@
-.container {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 16px;
-    font-size: 16px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header {
-    background-color: #ff9bb3;
-    padding: 16px;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #333;
-    margin: 0;
-  }
-  
-  .subtitle {
-    font-size: 0.875rem;
-    color: #555;
-    margin-top: 4px;
-  }
-  
-  .userTypeSelector {
-    display: flex;
-    border-bottom: 1px solid #eaeaea;
-  }
-  
-  .userTypeButton {
-    flex: 1;
-    padding: 10px 0;
-    background-color: #f5f5f5;
-    border: none;
-    color: #666;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .userTypeButton.active {
-    background-color: #ff9bb3;
-    color: white;
-  }
-  
-  .form {
-    padding: 24px;
-  }
-  
-  .formGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  
-  .formGroup {
-    margin-bottom: 16px;
-  }
-  
-  .label {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 6px;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    transition: border-color 0.2s;
-  }
-  
-  .input:focus {
-    outline: none;
-    border-color: #ff9bb3;
-    box-shadow: 0 0 0 2px rgba(255, 155, 179, 0.2);
-  }
-  
-  .errorText {
-    color: #e53e3e;
-    font-size: 0.75rem;
-    margin-top: 4px;
-  }
-  
-  .checkboxGroup {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .checkbox {
-    margin-right: 8px;
-    accent-color: #ff9bb3;
-  }
-  
-  .checkboxLabel {
-    font-size: 0.875rem;
-    color: #555;
-  }
-  
-  .registerButton {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff9bb3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 8px;
-  }
-  
-  .registerButton:hover {
-    background-color: #ff7a9a;
-  }
-  
-  .loginLink {
-    text-align: center;
-    font-size: 0.875rem;
-    color: #666;
-    margin-top: 16px;
-  }
-  
-  .link {
-    color: #ff9bb3;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;     /* Centra el contenido verticalmente */
+  height: 100vh;           /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.seccion_formulario {
+  width: 100%;
+  max-width: 500px; /* Establece un ancho máximo para que no se expanda demasiado */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input_contraseña {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;  /* Añade un pequeño margen */
+}
+
+.input_contraseña input {
+  width: 85%; /* Ajusta el ancho para que el botón no esté demasiado pegado */
+}
+
+.input_contraseña button {
+  width: 13%;  /* Define un ancho para el botón */
+  padding: 10px;
+  background-color: #72BAA9; /* Puedes ajustar el color si lo prefieres */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;  /* Agrega un margen al botón para que no quede tan pegado */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #474E93;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #7E5CAD;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #474E93;
+}
+
+
