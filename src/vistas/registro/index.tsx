@@ -27,7 +27,7 @@ const Registro = () => {
         nombre,
         apellido,
         correo,
-        contraseña,
+        contrasena: contraseña,
         telefono,
         fechaNacimiento,
         tipoUsuario: TipoUsuario.CLIENTE,
@@ -61,7 +61,7 @@ const Registro = () => {
   };
 
   return (
-    <div className={styles.contenedor}>
+  <div className={styles.contenedor}>
       <div className={styles.seccion_formulario}>
         <h2>Registro de Cliente</h2>
         <input

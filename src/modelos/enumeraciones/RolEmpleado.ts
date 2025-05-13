@@ -1,5 +1,4 @@
 export const RolEmpleado = {
-    ADMINISTRADOR: "ADMINISTRADOR",
     COCINERO: "COCINERO",
     MESERO: "MESERO",
     REPARTIDOR: "REPARTIDOR"

@@ -2,7 +2,7 @@
 
 // Representa el tipo Cliente, extendido de Usuario, con fechaNacimiento como string (ISO)
 export interface Cliente extends Usuario {
-    fechaNacimiento: string; // Se mantiene en formato ISO 'YYYY-MM-DD'
+    fechaNacimiento: String; // Se mantiene en formato ISO 'YYYY-MM-DD'
 }
 
 // Tipo para crear un nuevo cliente, omitiendo el campo id_usuario
