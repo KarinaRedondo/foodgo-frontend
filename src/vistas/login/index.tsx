@@ -9,16 +9,16 @@ import Swal from "sweetalert2";
 const IniciarSesion = () => {
   const navigate = useNavigate();
   const [correo, setCorreo] = useState("");
-  const [contraseña, setContraseña] = useState("");
+  const [contrasena, setContrasena] = useState("");
   const [cargando, setCargando] = useState(false);
-  const [verContraseña, setVerContraseña] = useState(false);
+  const [verContrasena, setVerContrasena] = useState(false);
 
   const loginPeticion = async () => {
     setCargando(true);
     try {
       const informacionDelUsuarioLogueado = await iniciarSesion(
         correo,
-        contraseña
+        contrasena
       );
 
       localStorage.setItem(
@@ -77,17 +77,12 @@ const IniciarSesion = () => {
 
         <div className={styles.input_contraseña}>
           <input
-            type={verContraseña ? "text" : "password"}
+            type={verContrasena ? "text" : "password"}
             placeholder="Ingresa tu contraseña"
-            value={contraseña}
-            onChange={(e) => setContraseña(e.target.value)}
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+            className={styles.input_password}
           />
-          <button
-            type="button"
-            onClick={() => setVerContraseña(!verContraseña)}
-          >
-            {verContraseña ? <EyeOff /> : <Eye />}
-          </button>
         </div>
 
         <BotonComponente

@@ -8,7 +8,7 @@ const Registro = () => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
-  const [contraseña, setContraseña] = useState("");
+  const [contrasena, setContrasena] = useState("");
   const [telefono, setTelefono] = useState("");
   const [fechaNacimiento, setFechaNacimiento] = useState("");
   const [direccionCalle, setDireccionCalle] = useState("");
@@ -27,7 +27,7 @@ const Registro = () => {
         nombre,
         apellido,
         correo,
-        contrasena: contraseña,
+        contrasena,
         telefono,
         fechaNacimiento,
         tipoUsuario: TipoUsuario.CLIENTE,
@@ -116,12 +116,9 @@ const Registro = () => {
           <input
             type={verContraseña ? "text" : "password"}
             placeholder="Contraseña"
-            value={contraseña}
-            onChange={(e) => setContraseña(e.target.value)}
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
           />
-          <button type="button" onClick={() => setVerContraseña(!verContraseña)}>
-            {verContraseña ? "Ocultar" : "Ver"}
-          </button>
         </div>
         <button onClick={crearClientePeticion} disabled={isLoading}>
           {isLoading ? "Registrando..." : "Crear Cuenta"}

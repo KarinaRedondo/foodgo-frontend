@@ -1,59 +1,78 @@
-import { useEffect, useState } from "react";
-import styles from "./Header.module.css";
-import type { TipoUsuario } from "../../modelos/enumeraciones/tipoUsuario";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './Header.module.css';
+import { TipoUsuario } from '../../modelos/enumeraciones/TipoUsuario';
 
-// Definir el tipo de usuario según la interfaz
-export interface Usuario {
-  id: number;
-  nombre: string;  // Nombre del usuario
-  apellido: string;  // Apellido del usuario
-  correo: string;
-  contraseña: string;  // Contraseña del usuario
-  telefono: string;  // Teléfono del usuario
-  direccionCalle: string;  // Calle de la dirección del usuario
-  direccionNumero: string;  // Número de la dirección
-  direccionBarrio: string;  // Barrio de la dirección
-  tipoUsuario: TipoUsuario;  // Rol o tipo de usuario (Administrador, Cliente, etc.)
+interface HeaderProps {
+  titulo: string;
+  tipoUsuario?: typeof TipoUsuario[keyof typeof TipoUsuario];
+  showBackButton?: boolean;
+  nombreUsuario?: string;
 }
 
-const Header = () => {
-  // Estado inicial del usuario según la nueva interfaz
-  const [usuario, setUsuario] = useState<Usuario>({
-    id: 1,
-    nombre: "Karina",
-    apellido: "Redondo",
-    correo: "",
-    contraseña: "",
-    telefono: "",
-    direccionCalle: "",
-    direccionNumero: "",
-    direccionBarrio: "",
-    tipoUsuario: "CLIENTE", 
-  });
+const Header: React.FC<HeaderProps> = ({ 
+  titulo, 
+  tipoUsuario, 
+  showBackButton = false,
+  nombreUsuario
+}) => {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    // Recuperar el usuario almacenado en localStorage
-    const storedUsuario = localStorage.getItem("usuario");
-    if (storedUsuario) {
-      setUsuario(JSON.parse(storedUsuario));  // Parsear los datos del usuario almacenados
+  const handleBack = () => {
+    navigate(-1);
+  };
+
+  const handleNavigateToHome = () => {
+    switch (tipoUsuario) {
+      case TipoUsuario.ADMIN:
+        navigate('/admin/restaurantes');
+        break;
+      case TipoUsuario.CLIENTE:
+        navigate('/cliente/restaurantes');
+        break;
+      case TipoUsuario.EMPLEADO:
+        // Aquí deberíamos tener una lógica adicional para los diferentes tipos de empleados
+        navigate('/empleado/dashboard');
+        break;
+      default:
+        navigate('/');
+        break;
     }
-  }, []);
+  };
+
+  const handleLogout = () => {
+    // Eliminar datos de sesión
+    localStorage.removeItem('usuario');
+    // Redirigir al login
+    navigate('/login');
+  };
 
   return (
-    <div className={styles.cn_header}>
-      <div className={styles.logo}>
-        {usuario && (
+    <header className={styles.header}>
+      <div className={styles.headerLeft}>
+        {showBackButton && (
+          <button className={styles.backButton} onClick={handleBack}>
+            ← Volver
+          </button>
+        )}
+        <h1 className={styles.logo} onClick={handleNavigateToHome}>RestauranteApp</h1>
+      </div>
+      <div className={styles.headerCenter}>
+        <h2 className={styles.pageTitle}>{titulo}</h2>
+      </div>
+      <div className={styles.headerRight}>
+        {nombreUsuario && (
           <div className={styles.avatar}>
-            {usuario.nombre.charAt(0).toUpperCase()} {/* Mostrar la inicial del nombre */}
+            {nombreUsuario.charAt(0).toUpperCase()}
           </div>
         )}
+        {tipoUsuario && (
+          <button className={styles.logoutButton} onClick={handleLogout}>
+            Cerrar sesión
+          </button>
+        )}
       </div>
-      <div className={styles.info_User}>
-        <span>
-          {usuario ? `Bienvenido, ${usuario.nombre}` : "Usuario no disponible"}
-        </span>
-      </div>
-    </div>
+    </header>
   );
 };
 

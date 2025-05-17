@@ -1,0 +1,61 @@
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.cardStatus {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.cardContent {
+  margin-bottom: 16px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardActionButton {
+  background-color: #4a6fa5;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.cardActionButton:hover {
+  background-color: #3a5a80;
+}
+
+/* Estilos para contenido dentro de las tarjetas */
+.cardRow {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.cardLabel {
+  font-weight: 500;
+  min-width: 120px;
+  color: #666;
+}
+
+.cardValue {
+  color: #333;
+}

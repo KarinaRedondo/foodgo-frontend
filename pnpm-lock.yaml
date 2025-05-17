@@ -2122,6 +2122,7 @@ snapshots:
   'foodgo-frontend@file:':
     dependencies:
       axios: 1.9.0
+      lucide-react: 0.508.0(react@19.1.0)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       react-feather: 2.0.10(react@19.1.0)

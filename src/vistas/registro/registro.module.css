@@ -2,8 +2,9 @@
 .contenedor {
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center;     /* Centra el contenido verticalmente */
-  height: 100vh;           /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh;
+  width: 100vw;
 }
 
 .seccion_formulario {
@@ -32,28 +33,13 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;  /* Añade un pequeño margen */
-}
-
-.input_contraseña input {
-  width: 85%; /* Ajusta el ancho para que el botón no esté demasiado pegado */
-}
-
-.input_contraseña button {
-  width: 13%;  /* Define un ancho para el botón */
-  padding: 10px;
-  background-color: #72BAA9; /* Puedes ajustar el color si lo prefieres */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;  /* Agrega un margen al botón para que no quede tan pegado */
+  margin: 10px 0; /* Añade un pequeño margen */
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background-color: #474E93;
+  background-color: #474e93;
   color: white;
   border: none;
   border-radius: 4px;
@@ -62,7 +48,7 @@ button {
 }
 
 button:disabled {
-  background-color: #7E5CAD;
+  background-color: #7e5cad;
 }
 
 p {
@@ -71,7 +57,5 @@ p {
 }
 
 a {
-  color: #474E93;
+  color: #474e93;
 }
-
-
